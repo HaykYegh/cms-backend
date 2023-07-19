@@ -1,0 +1,1 @@
+INSERT INTO internal.templates(subject, content, "created_at", "updated_at", active, params) VALUES ($1, $2, now(), now(), TRUE, $3) RETURNING "template_id"

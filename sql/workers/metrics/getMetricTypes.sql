@@ -1,0 +1,1 @@
+SELECT metric_type_id as "metricTypeId", name FROM metrics.metric_types;

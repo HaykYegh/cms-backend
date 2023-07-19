@@ -1,0 +1,1 @@
+SELECT "package_status_id", "name" FROM sticker."package_statuses"

@@ -1,0 +1,1 @@
+SELECT log_action_id, name FROM utilities.log_actions limit 100;

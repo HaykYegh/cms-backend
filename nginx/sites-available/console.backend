@@ -1,0 +1,29 @@
+server {
+        listen [::]:443 ssl;
+        listen 443 ssl;
+        ssl_certificate /etc/nginx/ssl/brilliant.crt;
+        ssl_certificate_key /etc/nginx/ssl/brilliant.key;
+
+        client_max_body_size 20m;
+        server_name napi-console.brilliant.com.bd;
+
+        access_log /var/log/nginx/napi-console.brilliant.com.bd.access.log;
+        error_log /var/log/nginx/napi-console.brilliant.com.bd.error.log;
+
+        location / {
+            proxy_pass http://localhost:3001;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+        }
+        # location ~ /\.ht {
+        #        deny all;
+        # }
+
+    #include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    #ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+

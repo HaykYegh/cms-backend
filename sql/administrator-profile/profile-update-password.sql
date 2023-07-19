@@ -1,0 +1,1 @@
+SELECT dashboard."updatePassword"($1, $2, $3) as action

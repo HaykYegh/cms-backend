@@ -1,0 +1,1 @@
+SELECT customer_id, prefix FROM customer.customers WHERE active=TRUE;

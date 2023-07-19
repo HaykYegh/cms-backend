@@ -1,0 +1,1 @@
+SELECT dashboard."signUpAdministrator"($1, $2, $3) as administrator

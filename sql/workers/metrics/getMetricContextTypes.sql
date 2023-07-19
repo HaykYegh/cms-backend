@@ -1,0 +1,1 @@
+SELECT metric_context_type_id as "metricContextTypeId", name FROM metrics.metric_context_types;

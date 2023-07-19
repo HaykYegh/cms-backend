@@ -1,0 +1,1 @@
+UPDATE stripe.tier_groups SET name=$2 WHERE tier_group_id=$1 RETURNING tier_group_id AS "tierGroupId", name;

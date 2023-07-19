@@ -1,0 +1,1 @@
+SELECT "platform_id", "name" as value, "name" as label FROM internal.platforms

@@ -1,0 +1,1 @@
+INSERT INTO sticker.package_countries (package_id, country_id) SELECT $1 as package_id, (c->>'country_id')::INTEGER as country_id FROM json_array_elements($2) c ;

@@ -1,0 +1,1 @@
+INSERT INTO utilities.logs (log_action_id, raw, administrator_id) VALUES ($1, $2,$3) returning log_id
